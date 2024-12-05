@@ -6,9 +6,9 @@
 <!-- Desktop Sidebar -->
 <div class="hidden sm:flex flex-col items-center fixed top-[3.5rem] left-0 h-[calc(100vh-3.5rem)] w-20 bg-background border-r shadow-sm">
   <!-- Sidebar Icon Wrapper -->
-  <div class="flex flex-col items-center justify-between flex-1 py-4 space-y-6">
+  <div class="flex flex-col items-center justify-between flex-1">
     <!-- Top Section -->
-    <div class="flex flex-col items-center space-y-6">
+    <div class="flex flex-col items-center justify-center flex-1 space-y-6">
       <!-- Dashboard Icon -->
       <a
         href="/dashboard"
@@ -61,7 +61,7 @@
     </div>
 
     <!-- Bottom Section -->
-    <div class="flex flex-col items-center space-y-6">
+    <div class="py-6">
       <!-- Settings Icon -->
       <a
         href="/settings"
