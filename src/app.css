@@ -20,10 +20,23 @@
     --secondary-foreground: 240 5.9% 10%;
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72.2% 50.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --ring: 240 10% 3.9%;
     --radius: 0.5rem;
+    
+    /* Softer status colors with transparency */
+    --status-pending: 45 100% 96%;      /* Light yellow background */
+    --status-pending-foreground: 45 80% 40%;  /* Darker yellow text */
+    
+    --status-processing: 214 100% 96%;   /* Light blue background */
+    --status-processing-foreground: 214 80% 40%;  /* Darker blue text */
+    
+    --status-success: 142 70% 96%;     /* Light green background */
+    --status-success-foreground: 142 60% 35%;  /* Darker green text */
+    
+    --status-error: 0 100% 96%;         /* Light red background */
+    --status-error-foreground: 0 80% 40%;  /* Darker red text */
   }
 
   .dark {
@@ -46,6 +59,19 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --ring: 240 4.9% 83.9%;
+
+    /* Dark mode status colors */
+    --status-pending: 45 70% 25%;
+    --status-pending-foreground: 45 100% 85%;
+    
+    --status-processing: 214 70% 25%;
+    --status-processing-foreground: 214 100% 85%;
+    
+    --status-success: 142 70% 25%;
+    --status-success-foreground: 142 100% 85%;
+    
+    --status-error: 0 70% 25%;
+    --status-error-foreground: 0 100% 85%;
   }
 }
 
@@ -56,4 +82,29 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom badge variants with refined styling */
+.badge-pending {
+  background-color: hsl(var(--status-pending));
+  color: hsl(var(--status-pending-foreground));
+  font-weight: 500;
+}
+
+.badge-processing {
+  background-color: hsl(var(--status-processing));
+  color: hsl(var(--status-processing-foreground));
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: hsl(var(--status-success));
+  color: hsl(var(--status-success-foreground));
+  font-weight: 500;
+}
+
+.badge-error {
+  background-color: hsl(var(--status-error));
+  color: hsl(var(--status-error-foreground));
+  font-weight: 500;
 }
